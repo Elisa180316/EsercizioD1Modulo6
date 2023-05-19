@@ -1,0 +1,30 @@
+GET http://localhost:5050/posts
+
+##############
+
+POST http://localhost:5050/posts/new HTTP/1.1
+content-type: application/json
+
+{
+    "title": "titolo 1",
+    "content": "ciao ciao ciao",
+    "author": "Elisa Fambrini",
+    "rate": "5"
+}
+
+###########
+
+PATCH http://localhost:5050/posts/6463838a4534e8ccce4a406c HTTP/1.1
+content-type: application/json
+
+{
+    "title": "titolo 2",
+    "content": "ciao ",
+    "author": "Elisa",
+    "rate": "2"
+}
+
+###########
+
+
+DELETE http://localhost:5050/posts/delete/6463838a4534e8ccce4a406c

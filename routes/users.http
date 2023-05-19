@@ -1,0 +1,34 @@
+GET http://localhost:5050/users
+
+###########
+
+POST http://localhost:5050/users/new HTTP/1.1
+content-type: application/json
+
+{
+    "firstname": "Diego",
+    "lastname": "Belluomini",
+    "email": "elisa.fambrini@yahoo.it",
+    "password": "ciao1254",
+    "age": "41"
+}
+
+###########
+
+PATCH http://localhost:5050/users/64635ffb9ca313a1e813f062 HTTP/1.1
+content-type: application/json
+
+{
+    "firstname": "Lily",
+    "lastname": "Belluomini",
+    "email": "lily.belluomini@yahoo.it",
+    "password": "ciao124",
+    "age": "7"
+}
+
+
+###########
+
+
+
+DELETE http://localhost:5050/users/delete/64635ffb9ca313a1e813f062
